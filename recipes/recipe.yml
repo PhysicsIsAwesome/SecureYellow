@@ -19,9 +19,16 @@ modules:
 
   - type: pacman
     install:
+      remove:
+        - glibc
+        - linux
+        - man
+        - man-db
+
+  - type: pacman
+    install:
       packages:
         - base
-
       # Archinstall pipewire
         - pipewire
         - pipewire-alsa
@@ -62,8 +69,116 @@ modules:
         - ttf-liberation
         - ttf-dejavu
 
-      # Archinstall KDE Plasma
-      #  - plasma-meta
+        - # Base packages
+        - linux-hardened
+        - glibc-locales
+        - nftables
+        - util-linux
+        - cryptsetup
+        - apparmor
+        - audit
+        - fakeroot
+        - debugedit
+        - man-db
+        - man-pages
+        - just
+        - whois
+        - git
+        - mokutil
+        - fsverity-utils
+        - sbctl
+        - sbsigntools
+        - gnulib-l10n
+        - efitools
+        - jq
+        - rsync
+        - rclone
+        - bash-completion
+        - dosfstools
+        - tpm2-tools
+        - amd-ucode
+        - linux-firmware
 
+        - # network
+        - networkmanager
+        - network-manager-applet
+
+        - # HP
+        - hplip
+
+        - # desktop
+        - iwd
+        - wireless_tools
+        - bolt
+        - desktop-file-utils
+        - pax-utils
+        - pgpdump
+        - qemu-guest-agent
+        - wireless-regdb
+        - xdg-desktop-portal
+        - tesseract-data-deu
+        - tesseract-data-eng
+
+        - # plasma
+        - plasma-meta
+        - ark
+        - sddm
+        - bluedevil
+        - breeze-gtk
+        - kde-gtk-config
+        - kdeplasma-addons
+        - kgamma
+        - kinfocenter
+        - kscreen
+        - ksshaskpass
+        - kwallet-pam
+        - kwrited
+        - ocean-sound-theme
+        - plasma-desktop
+        - plasma-disks
+        - plasma-nm
+        - plasma-pa
+        - plasma-systemmonitor
+        - plasma-thunderbolt
+        - plasma-welcome
+        - plasma-workspace-wallpapers
+        - powerdevil
+        - sddm-kcm
+        - xdg-desktop-portal-kde
+        - flatpak-kcm
+        - konsole
+        - dolphin
+        - spectacle
+        - skanpage
+        - kate
+        - filelight
+        - 
+        - # Additional packages
+        - firefox
+        - spice-vdagent
+        - flatpak
+        - thunderbird
+        - thunderbird-i18n-de
+        - thunderbird-i18n-en-us
+        - torbrowser-launcher
+        - sydbox
+        - pandora_box
+        - kernel-hardening-checker
+
+        - # Virtualization
+        - libvirt
+        - dnsmasq
+        - qemu-desktop
+        - virt-firmware
+        - edk2-ovmf
+        - virt-manager
+        - virt-viewer
+
+        # Containers
+        - passt
+        - podman
+
+        # Devel
+        - base-devel
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
