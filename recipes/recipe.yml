@@ -172,8 +172,8 @@ modules:
         # - virt-viewer
 
         # Containers
-        - passt
-        - podman
+        # - passt
+        # - podman
 
         # Devel
         - base-devel
