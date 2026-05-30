@@ -47,9 +47,9 @@ modules:
         - power-profiles-daemon
 
       # Archinstall printer
-        - cups
-        - system-config-printer
-        - cups-pk-helper
+        # - cups
+        # - system-config-printer
+        # - cups-pk-helper
       
       # Archinstall Desktop
         - nano
@@ -102,7 +102,7 @@ modules:
         - network-manager-applet
 
         # HP
-        - hplip
+        # - hplip
 
         # desktop
         - iwd
@@ -114,8 +114,8 @@ modules:
         - qemu-guest-agent
         - wireless-regdb
         - xdg-desktop-portal
-        - tesseract-data-deu
-        - tesseract-data-eng
+        # - tesseract-data-deu
+        # - tesseract-data-eng
 
         # plasma
         - plasma-meta
@@ -185,5 +185,6 @@ modules:
     snippets:
       - "git clone https://aur.archlinux.org/yay.git /run/install/yay"
       - "env EUID=123 PACMAN_AUTH=env makepkg -si --noconfirm --needed --dir /run/install/yay"
+      - "env EUID=123 PACMAN_AUTH=env yay -S --noconfirm --needed brave-bin"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
