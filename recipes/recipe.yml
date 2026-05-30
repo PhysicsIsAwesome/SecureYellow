@@ -18,12 +18,12 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: pacman
-    install:
-      remove:
-        - glibc
-        - linux
-        - man
-        - man-db
+    remove:
+      packages:
+      - glibc
+      - linux
+      - man
+      - man-db
 
   - type: pacman
     install:
@@ -152,8 +152,7 @@ modules:
         - skanpage
         - kate
         - filelight
-        - 
-        - # Additional packages
+        # Additional packages
         # - firefox
         # - spice-vdagent
         # - flatpak
@@ -165,7 +164,7 @@ modules:
         # - pandora_box
         # - kernel-hardening-checker
 
-        - # Virtualization
+        # Virtualization
         # - libvirt
         # - dnsmasq
         # - qemu-desktop
