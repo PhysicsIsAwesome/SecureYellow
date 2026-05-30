@@ -69,7 +69,7 @@ modules:
         - ttf-liberation
         - ttf-dejavu
 
-        - # Base packages
+      # Base packages
         - linux-hardened
         - glibc-locales
         - nftables
@@ -99,14 +99,14 @@ modules:
         - amd-ucode
         - linux-firmware
 
-        - # network
+        # network
         - networkmanager
         - network-manager-applet
 
-        - # HP
+        # HP
         - hplip
 
-        - # desktop
+        # desktop
         - iwd
         - wireless_tools
         - bolt
@@ -119,33 +119,33 @@ modules:
         - tesseract-data-deu
         - tesseract-data-eng
 
-        - # plasma
+        # plasma
         - plasma-meta
-        - ark
+        # - ark
         - sddm
-        - bluedevil
-        - breeze-gtk
-        - kde-gtk-config
-        - kdeplasma-addons
-        - kgamma
-        - kinfocenter
-        - kscreen
-        - ksshaskpass
-        - kwallet-pam
-        - kwrited
-        - ocean-sound-theme
-        - plasma-desktop
-        - plasma-disks
-        - plasma-nm
-        - plasma-pa
-        - plasma-systemmonitor
-        - plasma-thunderbolt
-        - plasma-welcome
-        - plasma-workspace-wallpapers
-        - powerdevil
-        - sddm-kcm
-        - xdg-desktop-portal-kde
-        - flatpak-kcm
+        # - bluedevil
+        # - breeze-gtk
+        # - kde-gtk-config
+        # - kdeplasma-addons
+        # - kgamma
+        # - kinfocenter
+        # - kscreen
+        # - ksshaskpass
+        # - kwallet-pam
+        # - kwrited
+        # - ocean-sound-theme
+        # - plasma-desktop
+        # - plasma-disks
+        # - plasma-nm
+        # - plasma-pa
+        # - plasma-systemmonitor
+        # - plasma-thunderbolt
+        # - plasma-welcome
+        # - plasma-workspace-wallpapers
+        # - powerdevil
+        # - sddm-kcm
+        # - xdg-desktop-portal-kde
+        # - flatpak-kcm
         - konsole
         - dolphin
         - spectacle
@@ -154,25 +154,25 @@ modules:
         - filelight
         - 
         - # Additional packages
-        - firefox
-        - spice-vdagent
-        - flatpak
-        - thunderbird
-        - thunderbird-i18n-de
-        - thunderbird-i18n-en-us
-        - torbrowser-launcher
-        - sydbox
-        - pandora_box
-        - kernel-hardening-checker
+        # - firefox
+        # - spice-vdagent
+        # - flatpak
+        # - thunderbird
+        # - thunderbird-i18n-de
+        # - thunderbird-i18n-en-us
+        # - torbrowser-launcher
+        # - sydbox
+        # - pandora_box
+        # - kernel-hardening-checker
 
         - # Virtualization
-        - libvirt
-        - dnsmasq
-        - qemu-desktop
-        - virt-firmware
-        - edk2-ovmf
-        - virt-manager
-        - virt-viewer
+        # - libvirt
+        # - dnsmasq
+        # - qemu-desktop
+        # - virt-firmware
+        # - edk2-ovmf
+        # - virt-manager
+        # - virt-viewer
 
         # Containers
         - passt
@@ -180,5 +180,15 @@ modules:
 
         # Devel
         - base-devel
+
+        # Network monitoring/firewall
+        # - sniffnet
+
+  - type: script
+    snippets:
+      - "git clone https://aur.archlinux.org/yay.git /run/install/yay"
+      - "cd /run/install/yay"
+      - "env EUID=123 PACMAN_AUTH=env makepkg -si --noconfirm --needed"
+
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
