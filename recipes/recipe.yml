@@ -183,8 +183,8 @@ modules:
 
   - type: script
     snippets:
-      - "git clone https://aur.archlinux.org/yay.git /run/install/yay"
-      - "env EUID=123 PACMAN_AUTH=env makepkg -si --noconfirm --needed --dir /run/install/yay"
-      - "env EUID=123 PACMAN_AUTH=env yay -S --noconfirm --needed brave-bin"
+      - "git clone https://aur.archlinux.org/paru.git /run/install/paru"
+      - "env EUID=123 PACMAN_AUTH=env makepkg -si --noconfirm --needed --dir /run/install/paru"
+      - "env EUID=123 PACMAN_AUTH=env paru -S --noconfirm --needed brave-bin"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
