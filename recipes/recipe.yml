@@ -144,6 +144,7 @@ modules:
         # - sddm-kcm
         # - xdg-desktop-portal-kde
         # - flatpak-kcm
+        # - khelpcenter
         - konsole
         - dolphin
         - spectacle
@@ -185,6 +186,6 @@ modules:
     snippets:
       - "git clone https://aur.archlinux.org/paru.git /run/install/paru"
       - "env EUID=123 PACMAN_AUTH=env makepkg -si --noconfirm --needed --dir /run/install/paru"
-      - "env EUID=123 PACMAN_AUTH=env paru -S --noconfirm --needed brave-bin"
+      - "env EUID=123 PACMAN_AUTH=env paru -S --noconfirm --needed --mflags 'env EUID=123 PACMAN_AUTH=env' brave-bin"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
