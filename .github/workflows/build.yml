@@ -46,5 +46,4 @@ jobs:
             output-image: secureyellow-sealed
             signing-key: ${{ secrets.DB_KEY }}
             signing-cert: ${{ secrets.DB_CRT }}
-            cmdline: rw rootflags=subvol=root rd.luks.name=7fa68618-91b8-4cf6-8a30-6c662331b0c7=luks-7fa68618-91b8-4cf6-8a30-6c662331b0c7 root=/dev/mapper/luks-7fa68618-91b8-4cf6-8a30-6c662331b0c7
-            sudo: sudo
+            cmdline: "rw rootflags=subvol=root rd.luks.name=7fa68618-91b8-4cf6-8a30-6c662331b0c7=luks-7fa68618-91b8-4cf6-8a30-6c662331b0c7 root=/dev/mapper/luks-7fa68618-91b8-4cf6-8a30-6c662331b0c7"
