@@ -39,6 +39,11 @@ jobs:
           push: false
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
+      - name: List images
+        run: |
+          echo "Podman: $(podman images)"
+          echo "Docker: $(docker images)"
+          echo "Buildah: $(buildah images)"
       - name: Seal image
         uses: PhysicsIsAwesome/bootc-seal-action@test
         with:
