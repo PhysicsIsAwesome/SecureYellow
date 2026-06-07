@@ -41,9 +41,14 @@ jobs:
           maximize_build_space: true
       - name: List images
         run: |
-          echo "Podman: $(podman images)"
-          echo "Docker: $(docker images)"
-          echo "Buildah: $(buildah images)"
+          echo "Podman: \n $(podman images)"
+          echo "Docker: \n $(docker images)"
+          echo "Buildah: \n $(buildah images)"
+          echo "ls: \n $(sudo ls -la)"
+          echo "SUDO:\n"
+          echo "Podman: \n $(sudo podman images)"
+          echo "Docker: \n $(sudo docker images)"
+          echo "Buildah: \n $(sudo buildah images)"
       - name: Seal image
         uses: PhysicsIsAwesome/bootc-seal-action@test
         with:
