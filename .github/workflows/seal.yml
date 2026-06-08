@@ -1,3 +1,5 @@
 name: seal
+on:
+  workflow_dispatch: # allow manually triggering builds
 jobs:
     seal:
