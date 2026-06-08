@@ -1,4 +1,4 @@
-name: seal
+name: myseal
 on:
   pull_request:
   workflow_dispatch: # allow manually triggering builds
