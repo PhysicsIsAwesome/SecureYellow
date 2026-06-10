@@ -30,7 +30,7 @@ jobs:
       - name: Seal image
         uses: PhysicsIsAwesome/bootc-seal-action@test
         with:
-            input-image: ghcr.io/physicsisawesome/secureyellow:latest
+            input-image: ghcr.io/physicsisawesome/secureyellow:br-basic-arch-setup-latest-20260607
             output-image: secureyellow-sealed
             signing-key: ${{ secrets.DB_KEY }}
             signing-cert: ${{ secrets.DB_CRT }}
